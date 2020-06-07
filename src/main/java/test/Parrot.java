@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class Fish implements Animal {
+public class Parrot implements Animal{
     private boolean angry = true;
 
     @Override
@@ -28,7 +28,7 @@ public class Fish implements Animal {
     @Override
     public List<FoodType> getPossibleFeedTypes(){
         List<FoodType> foodTypeList = new ArrayList<>();
-        foodTypeList.add(FoodType.FISH_FEED);
+        foodTypeList.add(FoodType.CORN);
         return foodTypeList;
     }
 }

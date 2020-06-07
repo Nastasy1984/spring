@@ -4,6 +4,9 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 import test.dto.Food;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.springframework.beans.factory.config.BeanDefinition.SCOPE_PROTOTYPE;
 
 @Component
@@ -24,5 +27,12 @@ public class Dog implements Animal {
     @Override
     public boolean isAngry() {
         return false;
+    }
+
+    @Override
+    public List<FoodType> getPossibleFeedTypes(){
+        List<FoodType> foodTypeList = new ArrayList<>();
+        foodTypeList.add(FoodType.MEAT);
+        return foodTypeList;
     }
 }
